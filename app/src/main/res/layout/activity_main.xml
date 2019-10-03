@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="14dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Rl1">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/defaultprofile"
+                android:layout_below="@+id/progress_horizontal"
+                android:id="@+id/img"/>
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_circular"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+        <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_horizontal"
+                android:indeterminateOnly="true"
+                android:indeterminate="true"
+                android:scaleY="3"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_marginTop="10dp"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/Rl1"
+                  android:orientation="horizontal">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/glide"
+                android:padding="5dp"
+                android:layout_weight=".5"
+                android:text="Glide"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/picasso"
+                android:padding="5dp"
+                android:layout_weight=".5"
+                android:text="Picasso"/>
+    </LinearLayout>
+</RelativeLayout>
